@@ -588,11 +588,6 @@ video {
   gap: 1rem;
 }
 
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#131324\]{
   --tw-bg-opacity: 1;
   background-color: rgb(19 19 36 / var(--tw-bg-opacity));
