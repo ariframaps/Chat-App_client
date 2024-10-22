@@ -76,6 +76,7 @@ export const Register = () => {
           name="username"
           onChange={(e) => handleChange(e)}
           value={inputValues.username}
+          required
         />
         {/* email input */}
         <input
@@ -84,6 +85,7 @@ export const Register = () => {
           name="email"
           onChange={(e) => handleChange(e)}
           value={inputValues.email}
+          required
         />
         {/* password input */}
         <input
@@ -92,6 +94,7 @@ export const Register = () => {
           name="password"
           onChange={(e) => handleChange(e)}
           value={inputValues.password}
+          required
         />
         {/* confirm password input */}
         <input
@@ -100,6 +103,7 @@ export const Register = () => {
           name="confirmPassword"
           onChange={(e) => handleChange(e)}
           value={inputValues.confirmPassword}
+          required
         />
 
         {/* submit and login button */}
