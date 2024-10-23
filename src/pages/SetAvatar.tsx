@@ -6,7 +6,7 @@ import { setAvatarRoute } from "../utils/APIRoutes";
 import { toast, ToastContainer } from "react-toastify";
 import { toastOptions } from "../config/toastOptions";
 
-export const SetAvatar = () => {
+export const SetAvatar = ({ user }: { user: string | null }) => {
   const navigate = useNavigate();
 
   const [avatars, setAvatars] = useState<string[]>([]);
@@ -37,7 +37,6 @@ export const SetAvatar = () => {
 
   async function handleSelectAvatar(): Promise<void> {
     if (selectedAvatar !== undefined) {
-      const user = localStorage.getItem("chatapp-user");
       if (user) {
         const userId = JSON.parse(user)._id.toString();
         const { data } = await axios.post(`${setAvatarRoute}/${userId}`, {
@@ -45,7 +44,7 @@ export const SetAvatar = () => {
         });
 
         if (data.status) {
-          toast.success(data.msg, toastOptions);
+          navigate("/");
         } else {
           toast.error(data.msg, toastOptions);
         }

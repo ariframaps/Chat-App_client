@@ -37,7 +37,7 @@ export const isConfirmPwdTheSame = (
   return confirmPwd === password;
 };
 
-export const isUserLoggedIn = (): string | boolean => {
-  const user = localStorage.getItem("user");
-  return user ? user : false;
+export const isUserLoggedIn = (): string | null => {
+  const user = localStorage.getItem("chatapp-user");
+  return user;
 };
