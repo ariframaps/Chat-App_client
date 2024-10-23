@@ -36,3 +36,8 @@ export const isConfirmPwdTheSame = (
 ): boolean => {
   return confirmPwd === password;
 };
+
+export const isUserLoggedIn = (): string | boolean => {
+  const user = localStorage.getItem("user");
+  return user ? user : false;
+};
