@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { setAvatarRoute } from "../utils/APIRoutes";
 import { toast, ToastContainer } from "react-toastify";
 import { toastOptions } from "../config/toastOptions";
+import { UserSession } from "../types/UserSession";
 
-export const SetAvatar = ({ user }: { user: string | null }) => {
+export const SetAvatar = ({ user }: UserSession) => {
   const navigate = useNavigate();
 
   const [avatars, setAvatars] = useState<string[]>([]);

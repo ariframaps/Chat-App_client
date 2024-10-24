@@ -8,7 +8,7 @@ import { SetAvatar } from "./pages/SetAvatar";
 import { isUserLoggedIn } from "./utils/validators";
 
 function App() {
-  const user = isUserLoggedIn();
+  const user: string | null = isUserLoggedIn();
 
   return (
     <BrowserRouter>
